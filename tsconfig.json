@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "./build/",
+		"noEmit": false,
+		"noImplicitAny": false,
+		"module": "commonjs",
+		"target": "es2017",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"@classes/*": ["./src/classes/*"]
+		},
+		"declaration": true,
+		"lib": ["es2017", "dom"],
+		"types": ["reflect-metadata", "node"]
+	},
+	"include": ["./**/*.ts"]
+}
