@@ -1,8 +1,11 @@
 #!/usr/bin/env node
-import Bootstrap from './src/classes/Boostrap';
-import { Command } from './src/decorators/Command';
 
-@Command('create')
-class Tea extends Bootstrap {}
+import * as prog from 'caporal';
+import brewCommand from './commands/brew';
 
-new Tea().run();
+prog
+.version('1.0.0-beta');
+
+brewCommand(prog);
+
+prog.parse(process.argv);
