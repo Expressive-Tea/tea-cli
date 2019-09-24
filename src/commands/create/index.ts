@@ -29,7 +29,7 @@ module.exports = ($prog, settings) => {
           name: 'license',
           message: 'What is License do you prefer',
           default: 'MIT',
-          validate: opt => !!licenses[opt]
+          validate: opt => (!!licenses[opt] ? true : `${opt} is not a valid SPDX license`)
         },
         {
           type: 'list',
@@ -37,6 +37,31 @@ module.exports = ($prog, settings) => {
           name: 'flavor',
           message: 'Please Select the flavor that you like it:',
           choices: ['ts-node', 'webpack']
+        },
+        {
+          type: 'confirm',
+          name: 'isNpmInstallable',
+          message: 'Would you like install npm packages',
+          default: true
+        },
+        {
+          type: 'list',
+          when: answers => answers.isNpmInstallable,
+          name: 'flavor',
+          message: 'Which package manager do you like more',
+          choices: ['npm ', 'yarn']
+        },
+        {
+          type: 'confirm',
+          name: 'isGitInstallable',
+          message: 'Would you like to setup git',
+          default: true
+        },
+        {
+          type: 'confirm',
+          name: 'isRootExample',
+          message: 'Would you like to add the Root Module Example',
+          default: false
         }
       ]);
 
@@ -44,6 +69,7 @@ module.exports = ($prog, settings) => {
       const $local = settings.root;
       const $templatePath = `${$local}/templates/${options.flavor || answers.flavor}/`;
 
+      /*
       if (fs.existsSync($templatePath)) {
         shell.mkdir('-p', $target);
         logger.info('Copying files…');
@@ -53,6 +79,7 @@ module.exports = ($prog, settings) => {
         logger.error(`The requested template for ${args.appName} wasn't found.`);
         process.exit(1);
       }
+      */
       console.log({ args, options, settings, $target, $local, answers });
     });
 };
