@@ -1,6 +1,6 @@
 import {BOOT_STAGES, Plugin} from '@expressive-tea/plugin';
 import {Stage} from '@expressive-tea/plugin/decorators';
-import {Express, Request, Response} from '@server/plugins/express';
+import {Express, Request, Response} from 'express';
 
 import * as bodyParser from 'body-parser';
 import * as compress from 'compression';

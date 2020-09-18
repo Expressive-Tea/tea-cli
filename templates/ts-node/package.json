@@ -1,16 +1,16 @@
 {
-  "name": "expressive-tea-sandbox",
-  "version": "1.0.0",
-  "description": "Expressive Tea Sandbox",
+  "name": "%%APP_NAME%%",
+  "version": "%%APP_VERSION%%",
+  "description": "%%APP_DESCRIPTION%%",
   "scripts": {
     "start": "ts-node-dev -r tsconfig-paths/register main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Someone <someone@example.com>",
-  "license": "MIT",
+  "license": "%%APP_LICENSE%%",
   "dependencies": {
-    "@expressive-tea/plugin": "0.0.4",
-    "@zerooneit/expressive-tea": "1.2.0",
+    "@expressive-tea/plugin": "^0.0.4",
+    "@zerooneit/expressive-tea": "^1.2.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",

@@ -26,6 +26,6 @@
   },
   "rulesDirectory": [],
   "linterOptions": {
-    "exclude": []
+    "exclude": ["templates/**/*"]
   }
 }
