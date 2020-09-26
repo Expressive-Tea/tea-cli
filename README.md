@@ -153,8 +153,11 @@ This project is under the Apache-2.0 License - see the [LICENSE](LICENSE) file f
 ## Contact
 
 Author - [Diego Resendez](https://twitter.com/diegoresendez)
+
 Twitter - [@expressive_tea](https://twitter.com/expressive_tea)
+
 Email - [support@expressive-tea.io](support@expressive-tea.io)
+
 Project Link: [https://github.com/Expressive-Tea/tea-cli](https://github.com/Expressive-Tea/tea-cli)
 
 ## Disclaimers
