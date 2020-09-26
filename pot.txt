@@ -1,6 +1,10 @@
+Welcome to TEA a CLI tool for Expressive Tea applications.
+
              ;,'
      _o_    ;:;'
  ,-.'---`.__ ;
 ((j`=====',-'
  `-\     /
     `-=-'
+
+

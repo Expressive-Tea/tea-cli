@@ -15,8 +15,9 @@
 		"paths": {
 			"@classes/*": ["./src/classes/*"]
 		},
-		"declaration": true,
-		"lib": ["es2017", "dom"]
+		"declaration": false,
+		"lib": ["es2017", "dom"],
+		"resolveJsonModule": true
 	},
 	"include": ["./**/*.ts"],
 	"exclude": ["templates/**/*", "build/**/*"]

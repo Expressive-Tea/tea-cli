@@ -1,16 +1,25 @@
 #!/usr/bin/env node
 
-import * as prog from 'caporal';
+import {program } from '@caporal/core';
 import { resolve } from 'path';
 import { pwd } from 'shelljs';
 import brewCommand from './commands/brew';
+import serveCommand from './commands/serve';
+
+// tslint:disable-next-line:no-var-requires
+const project = require('../package.json');
 
 const $root = resolve(__dirname);
 const $template = resolve($root, 'templates');
 const $current = resolve(pwd().toString());
-prog
-  .version('1.0.0-beta');
 
-brewCommand(prog, { $root, $template, $current });
+const $directories = { $root, $template, $current };
+program
+  .name(project.name)
+  .description(project.description)
+  .version(project.version);
 
-prog.parse(process.argv);
+brewCommand(program, $directories);
+serveCommand(program, $directories);
+
+program.run();
