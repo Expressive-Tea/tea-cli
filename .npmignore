@@ -25,3 +25,4 @@ tasks
 gulpfile.js
 jest.config.js
 jsdocs.json
+scripts

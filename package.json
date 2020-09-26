@@ -13,7 +13,9 @@
     "dev": "tsc -p tsconfig.json -w",
     "linter": "tslint -c tslint.json -p tsconfig.json",
     "optimize": "npx uglifyjs -c -m --verbose build/tea.js",
-    "clean": "npx rimraf build"
+    "clean": "npx rimraf build",
+    "postpublish": "npm run clean",
+    "prepublishOnly": "npm run linter && npm run build"
   },
   "author": "Diego Resendez <diego.resendez@zero-oneit.com>",
   "license": "Apache-2.0",

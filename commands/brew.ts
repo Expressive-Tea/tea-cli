@@ -1,6 +1,5 @@
 import { Program } from '@caporal/core';
 import * as shell from 'async-shelljs';
-import * as spinners from 'cli-spinners';
 import 'colors';
 import * as fs from 'fs';
 import * as glob from 'glob';

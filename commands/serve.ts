@@ -1,14 +1,7 @@
 import * as shell from 'async-shelljs';
-import * as spinners from 'cli-spinners';
 import 'colors';
 import * as fs from 'fs';
-import * as glob from 'glob';
-import * as inquirer from 'inquirer';
-import { snakeCase } from 'lodash';
-import * as ora from 'ora';
 import * as path from 'path';
-import * as semver from 'semver';
-import * as licenses from 'spdx-license-list/full';
 
 export default function serve($prog, $dirs) {
   $prog
