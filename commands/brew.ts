@@ -95,8 +95,6 @@ export default function brew($prog: Program, $dirs) {
         const templateFilename = `${answers.flavor}.zip`;
         const $template = path.join($dirs.$template, `../../templates/${templateFilename}`);
 
-        console.log($target, $template);
-
         if (answers.overrideFolder) {
           spinner.text = 'Overwrite current project...';
           await shell.asyncExec(`rm -rf ${$target}`, {silent: true});
@@ -106,7 +104,7 @@ export default function brew($prog: Program, $dirs) {
         await shell.asyncExec(`cd ${$target} && unzip ${$template}`, {silent: true});
 
         spinner.text = 'Applying template variables...';
-        const files = glob.sync('**\/*', {
+        const files = glob.sync(`${$target}\/**\/*`, {
           dot: true,
           nodir: true,
           realpath: true
