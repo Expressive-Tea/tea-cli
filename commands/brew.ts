@@ -19,8 +19,8 @@ export default function brew($prog: Program, $dirs) {
 
       try {
         const spinner = ora();
-        const pot = fs.readFileSync(path.resolve($dirs.$root, '../pot.txt'));
-        const cup = fs.readFileSync(path.resolve($dirs.$root, '../cup.txt'));
+        const pot = fs.readFileSync(path.resolve($dirs.$root, 'pot.txt'));
+        const cup = fs.readFileSync(path.resolve($dirs.$root, 'cup.txt'));
 
         console.log(pot.toString().white);
         console.log('Welcome to Tea, please give us the instruction to brew you a nice application.'.white.bold);
@@ -93,7 +93,7 @@ export default function brew($prog: Program, $dirs) {
 
         const $target = path.resolve($dirs.$current, answers.appName);
         const templateFilename = `${answers.flavor}.zip`;
-        const $template = path.join($dirs.$template, `../../templates/${templateFilename}`);
+        const $template = path.resolve($dirs.$template, templateFilename);
 
         if (answers.overrideFolder) {
           spinner.text = 'Overwrite current project...';

@@ -8,7 +8,7 @@ export default function serve($prog, $dirs) {
     .command('serve', 'Start an Expressive Tea Application')
     .option('-s, --silent', 'Silent application terminal outputs.', $prog.bool, false)
     .action(async ({ options }) => {
-      const pot = fs.readFileSync(path.resolve($dirs.$root, '../pot.txt'));
+      const pot = fs.readFileSync(path.resolve($dirs.$root, 'pot.txt'));
 
       console.log(pot.toString().white);
       console.log('Warming up the application be patient.'.white.bold);
