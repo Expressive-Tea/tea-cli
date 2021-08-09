@@ -1,4 +1,3 @@
-import * as shell from 'async-shelljs';
 import * as chalk from 'chalk';
 import 'colors';
 import * as fs from 'fs';
