@@ -1,6 +1,6 @@
 {
   "name": "@expressive-tea/tea",
-  "version": "1.0.0-alpha.2n",
+  "version": "1.0.0-alpha.2",
   "description": "Expressive Tea CLI",
   "main": "build/tea.js",
   "bin": {
